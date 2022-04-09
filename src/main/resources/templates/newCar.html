@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>new car</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+
+<body>
+    <div align = "center">
+        <h1>add new car</h1>
+
+        <div class="col-sm-4">
+
+            <form action="#" th:action="@{/save}" th:object="${car}" method="post">
+                <div alight="left">
+                    <tr>
+                        <label class="form-label" >Brand</label>
+                        <td>
+                            <input type="hidden" th:field="*{carId}" />
+                            <input type="text" th:field="*{brand}" class="form-control" placeholder="Brand" />
+                        </td>
+                    </tr>
+                </div>
+
+                <div alight="left">
+                    <tr>
+                        <label class="form-label" >Model</label>
+                        <td>
+                            <input type="text" th:field="*{model}" class="form-control" placeholder="Model" />
+                        </td>
+                    </tr>
+                </div>
+
+                <div alight="left">
+                    <tr>
+                        <label class="form-label" >Price</label>
+                        <td>
+                            <input type="text" th:field="*{price}" class="form-control" placeholder="Price" />
+                        </td>
+                    </tr>
+                </div>
+
+                <div alight="left">
+                    <tr>
+                        <label class="form-label" >Year of issue</label>
+                        <td>
+                            <input type="text" th:field="*{yearOfIssue}" class="form-control" placeholder="Year of issue" />
+                        </td>
+                    </tr>
+                </div>
+
+                <tr>
+                    <td colspan="5"><button type="submit" class="btn btn-info">Save</button> </td>
+                </tr>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
